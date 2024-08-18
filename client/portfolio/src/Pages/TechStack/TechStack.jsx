@@ -10,7 +10,7 @@ const TechStack = () => {
 
   return (
     <>
-      <div className="row Poppins-Regular">
+      <div className="row Poppins-Regular ">
         <div className="col-lg-10 col-12 d-flex gap-2 flex-column mb-lg-3 mb-5">
           <span className="fnt-primary-color f-30 fw-bold">My Tech Stack</span>
           <span className="f-16 fnt-light-color">

@@ -10,8 +10,8 @@ const WorkExp = () => {
   });
 
   return (
-    <div className="row mt-3 Poppins-Regular">
-      <div className="col-lg-8 col-12">
+    <div className="row mt-3 Poppins-Regular ">
+      <div className="col-lg-8 col-12 ">
         <div className=" fnt-primary-color f-30 fw-bold mb-3">Work Experience</div>
         <div>
           {getExperienceList?.data?.map((exp) => (

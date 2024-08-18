@@ -17,7 +17,7 @@ const Projects = () => {
           </span>
         </div>
         {getMyProjectsList?.map((project) => (
-        <div key={project._id} className="col-lg-5 col-12 card m-lg-3 m-0">
+        <div key={project._id} className="col-lg-5 col-12 card m-lg-3 m-2 mb-lg-0 mb-3  ">
           <strong className="card-header">{project.title}</strong>
           <div className="card-body">
             <p className="card-text">{project.desc}</p>

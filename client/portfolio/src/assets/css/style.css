@@ -13,11 +13,11 @@
 }
 
 .fnt-light-color {
-  color: #A7A7A7;
+  color: #a7a7a7;
 }
 
 .text-gradient {
-  background: linear-gradient(180deg, #E70FAA 0%, #13B0F5 97%);
+  background: linear-gradient(180deg, #e70faa 0%, #13b0f5 97%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -26,26 +26,46 @@
   font-family: WorkSans-Bold;
   font-size: 18px;
   font-weight: 700;
-  color: #42446E;
+  color: #42446e;
   border-radius: 10px;
 }
 
 .nav-link.active .icons-nav,
 .nav-link.active .fnt-nav-link {
-  color: #42446E;
+  color: #42446e;
 }
 
 .step-container {
   transform: rotate(90deg);
 }
 
-.main-container  {
+.main-container {
   max-height: 70vh;
   overflow-y: auto;
 }
 
+
 @media (max-width: 768px) {
-  .main-container  {
+  .main-container {
     max-height: 90vh;
   }
+  .home-container {
+    height: 80vh;
+    overflow: hidden !important;
+  }
+  .profile-image {
+    width:60% !important;
+    height: 70% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-container {
+    height: 55vh;
+  }
+  .profile-image {
+    width:130% !important;
+    height: 100% !important;
+  }
+  
 }
