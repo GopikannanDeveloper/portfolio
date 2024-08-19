@@ -4,10 +4,10 @@ import Education from "./Education/Education";
 
 const About = () => {
   return (
-    <>
+    <div className="container">
       <WorkExp />
       <Education />
-    </>
+    </div>
   );
 };
 
