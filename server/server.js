@@ -16,11 +16,7 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors({
-  origin: '*', // Allow all origins. Change this to your specific frontend domain if needed.
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(cors());
 app.use('/api/', homeRouter);
 app.use('/api/', experienceRouter);
 app.use('/api/', educationRouter);
