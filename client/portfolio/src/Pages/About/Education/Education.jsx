@@ -46,6 +46,7 @@ const Education = () => {
             <div className="d-lg-none d-block">
              <span className="fnt-light-color f-12">{edu.duration}</span>
            </div>
+           <hr/>
           </div>
         ))}
       </div>
