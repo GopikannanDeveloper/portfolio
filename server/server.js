@@ -1,14 +1,17 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const homeRouter = require('./src/routes/home/home');
-const experienceRouter = require('./src/routes/about/WorkExp/WorkExp')
+const experienceRouter = require('./src/routes/about/WorkExp/WorkExp');
 const educationRouter = require('./src/routes/about/education/education');
 const myTechRouter = require('./src/routes/techStack/techStack');
 const myProjectsRouter = require('./src/routes/projects/projects');
-const cors = require('cors');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+const MONGO_URI = process.env.MONGO_URI;
+
 const app = express();
 
 // Middleware
@@ -19,8 +22,9 @@ app.use('/api/', experienceRouter);
 app.use('/api/', educationRouter);
 app.use('/api/', myTechRouter);
 app.use('/api/', myProjectsRouter);
+
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/portfolio-app', {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -30,6 +34,12 @@ mongoose.connect('mongodb://127.0.0.1:27017/portfolio-app', {
   .catch((error) => {
     console.error('Error:', error);
   });
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 // Start server
 app.listen(PORT, () => {
