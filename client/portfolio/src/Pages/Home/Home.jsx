@@ -29,10 +29,10 @@ const Home = () => {
   };
   return (
     <div className="row d-flex home-container  ">
-      <div className="d-lg-none d-block  col-12 ms-lg-4 ">
+      <div className="d-lg-none d-block  col-12 ms-lg-4 mt-lg-2 mt-lg-4 ">
         {renderProfile()}
       </div>
-      <div className="col-lg-8  col-12 p-lg-4 mt-lg-3 mt-2">
+      <div className="col-lg-8  col-12 p-lg-4 mt-lg-3 mt-0">
         <div className="d-flex flex-column gap-1">
           <span className="Poppins-Regular fnt-primary-color f-30 fw-bold">
             Hi,

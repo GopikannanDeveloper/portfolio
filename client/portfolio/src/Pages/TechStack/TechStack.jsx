@@ -36,7 +36,7 @@ const TechStack = () => {
             {getMyTechList?.map((tech) => (
               <div
                 key={tech._id}
-                className="col-lg-3 col-4 mb-3 d-flex flex-column align-items-center justify-content-center"
+                className="col-lg-3 col-6 mb-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center"
               >
                 <img
                   src={techImages[tech.tech_name] || ""} // Use the techImages object
@@ -77,7 +77,7 @@ const TechStack = () => {
             {getMyLearnStackList?.map((tech) => (
               <div
                 key={tech._id}
-                className="col-lg-3 col-4 mb-3 d-flex flex-column align-items-center justify-content-center"
+                className="col-lg-3 col-6 mb-lg-3 mb-4 d-flex flex-column align-items-center justify-content-center"
               >
                 <img
                   src={learnImages[tech.tech_name] || ""} // Use the techImages object
