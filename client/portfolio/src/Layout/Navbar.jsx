@@ -13,20 +13,19 @@ const Navbar = () => {
   return (
     <div className="row">
       <div className="d-lg-block d-none col-2">
-        <div className=" d-flex gap-4 justify-content-end  align-items-center mt-2 ">
+        <div className=" d-flex gap-lg-4 gap-2 justify-content-end  align-items-center mt-2 ">
           <Avatar
-            alt="Remy Sharp"
             src={Profile}
             sx={{ width: 56, height: 56 }}
           />
         </div>
       </div>
-      <nav className="col-8 d-flex gap-lg-4 gap-5 ms-4 ms-lg-1 justify-content-lg-end justify-content-center align-items-center WorkSans-Regular">
+      <nav className="col-8 d-flex gap-lg-4 gap-4 ms-4 ms-lg-1 justify-content-lg-end justify-content-center align-items-center WorkSans-Regular">
         <NavLink
           to="/"
           className={({ isActive }) =>
             `d-flex ms-5 ms-lg-0 gap-1 align-items-center nav-link ${
-              isActive ? "active" : ""
+              isActive ? "chip active active" : "chip"
             }`
           }
         >
@@ -43,7 +42,7 @@ const Navbar = () => {
           to="about"
           className={({ isActive }) =>
             `d-flex gap-1 align-items-center nav-link   ${
-              isActive ? "active" : ""
+               isActive ? "chip active active" : "chip"
             }`
           }
         >
@@ -60,7 +59,7 @@ const Navbar = () => {
           to="myTech"
           className={({ isActive }) =>
             ` d-flex gap-1 align-items-center nav-link ${
-              isActive ? "active" : ""
+               isActive ? "chip active active" : "chip"
             }`
           }
         >
@@ -77,7 +76,7 @@ const Navbar = () => {
           to="projects"
           className={({ isActive }) =>
             ` d-flex gap-1 align-items-center nav-link ${
-              isActive ? "active" : ""
+              isActive ? "chip active active" : "chip"
             }`
           }
         >

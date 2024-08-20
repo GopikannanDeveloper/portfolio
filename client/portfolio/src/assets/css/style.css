@@ -44,7 +44,6 @@
   overflow-y: auto;
 }
 
-
 @media (max-width: 768px) {
   .main-container {
     max-height: 90vh;
@@ -54,7 +53,7 @@
     overflow: hidden !important;
   }
   .profile-image {
-    width:60% !important;
+    width: 60% !important;
     height: 70% !important;
   }
 }
@@ -64,8 +63,48 @@
     height: 55vh;
   }
   .profile-image {
-    width:130% !important;
+    width: 130% !important;
     height: 100% !important;
   }
-  
+}
+
+@keyframes wave {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+.skeleton-wave {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200px 100%;
+  animation: wave 0.1s infinite ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    padding: 8px 12px;
+  }
+
+  .chip.active {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .chip img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .chip {
+    display: none; 
+  }
 }
