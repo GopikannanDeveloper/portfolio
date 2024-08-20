@@ -8,6 +8,7 @@ const experienceRouter = require('./src/routes/about/WorkExp/WorkExp');
 const educationRouter = require('./src/routes/about/education/education');
 const myTechRouter = require('./src/routes/techStack/techStack');
 const myProjectsRouter = require('./src/routes/projects/projects');
+const myLearnRouter = require('./src/routes/learn/learn')
 
 const PORT = process.env.PORT || 8080;
 const MONGO_URI = process.env.MONGO_URI;
@@ -22,6 +23,7 @@ app.use('/api/', experienceRouter);
 app.use('/api/', educationRouter);
 app.use('/api/', myTechRouter);
 app.use('/api/', myProjectsRouter);
+app.use('/api/', myLearnRouter);
 
 // MongoDB connection
 mongoose.connect(MONGO_URI, {
