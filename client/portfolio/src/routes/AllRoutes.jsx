@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Layout from "../Layout/DashboardLayout";
 import Navbar from "../Layout/Navbar";
@@ -23,6 +23,7 @@ const AllRoutes = () => {
             <Route path="/about" element={<About />} />
             <Route path="/myTech" element={<TechStack />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Layout>
       </div>
