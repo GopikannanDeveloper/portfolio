@@ -46,4 +46,5 @@ export const getProfile = "profile";
 export const getExperience = "experience";
 export const getEducation = "education";
 export const getMyTech = "myTech";
+export const getMyLearn = "learn";
 export const getMyProjects = "projects";
