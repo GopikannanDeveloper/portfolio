@@ -20,7 +20,7 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <nav className="col-8 d-flex gap-lg-4 gap-4 ms-4 ms-lg-1 justify-content-lg-end justify-content-center align-items-center WorkSans-Regular">
+      <nav className="col-8 d-flex gap-lg-4 gap-4 ms-4 ps-4 ms-lg-1 justify-content-lg-end justify-content-center align-items-center WorkSans-Regular">
         <NavLink
           to="/"
           className={({ isActive }) =>
