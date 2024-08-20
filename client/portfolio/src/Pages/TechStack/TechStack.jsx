@@ -24,11 +24,12 @@ const TechStack = () => {
               className="col-lg-3 col-4 mb-3 d-flex flex-column align-items-center justify-content-center"
             >
               <img
-                src={tech.tech_image}
+                src={`images/${tech.tech_image}`}
                 alt={tech.tech_name}
                 className="tech-image"
                 style={{ height: "75px", width: "75px", objectFit: "contain" }}
               />
+
               <div className="fnt-light-color f-20 text-center mt-2">
                 {tech.tech_name}
               </div>
