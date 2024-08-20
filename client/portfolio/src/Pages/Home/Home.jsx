@@ -2,11 +2,20 @@ import React from "react";
 import { useFetchData } from "../../hooks/servicehooks";
 import { getProfile } from "../../apis/apiService";
 import Profile from "../../assets/images/profile-pic.png";
+import HomeSkeleton from "./Skeleton/homeSkeleton";
 const Home = () => {
-  const { data: getProfileList } = useFetchData({
+  const { data: getProfileList, isPending: pending } = useFetchData({
     key: "getProfile",
     url: getProfile,
   });
+
+  if (pending) {
+    return (
+      <>
+        <HomeSkeleton />
+      </>
+    );
+  }
   const renderProfile = () => {
     return (
       <div className="d-flex justify-content-center">
@@ -19,7 +28,7 @@ const Home = () => {
     );
   };
   return (
-    <div className="row d-flex home-container  " >
+    <div className="row d-flex home-container  ">
       <div className="d-lg-none d-block  col-12 ms-lg-4 ">
         {renderProfile()}
       </div>

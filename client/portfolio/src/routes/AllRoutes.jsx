@@ -9,7 +9,7 @@ import Projects from "../Pages/Projects/Projects";
 import Footer from "../Pages/Footer/Footer";
 const AllRoutes = () => {
   return (
-    <React.Fragment>
+    <div className="overflow-x-hidden">
       <div className="p-3 d-lg-block d-none mb-4">
         <Navbar />
       </div>
@@ -36,7 +36,7 @@ const AllRoutes = () => {
           <Footer />
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
